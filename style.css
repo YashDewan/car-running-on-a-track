@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+}
+
+.sky{
+    background-image: url("background.jpg");
+    width: 100vw;
+    height: 100vh;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    position: absolute;
+    animation: carupdown linear .9s infinite ;
+}
+
+.trees{
+    background-image: url("trees.png");
+    width: 100vw;
+    height: 100vh;
+    background-repeat: repeat-x;
+    background-size: cover;
+    position: absolute;
+    bottom: 16%;
+}
+
+.track{
+    background-image: url("track.png");
+    width: 800vw;
+    height: 100vh;  
+    background-repeat: repeat-x;
+    position: absolute;
+    top: 70vh;
+    animation: trackmove linear 1s infinite ;
+    overflow: hidden;
+}
+
+.car{
+    background-image: url("car_body.png");
+    width: 380px;
+    height: 100px; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    position: absolute;
+    left: 444px;
+    bottom: 25vh;
+    animation: carupdown linear .9s infinite ;
+}
+
+.wheel1 img{
+    width: 77px;
+    position: relative;
+    top: 44px;
+    left: 42px;
+    animation: wheelrotate linear .6s infinite ;
+}
+
+.wheel2 img{
+    width: 77px;
+    position: relative;
+    top: -39px;
+    left: 235px;
+    animation: wheelrotate linear .6s infinite ;
+}
+
+@keyframes wheelrotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes trackmove{
+    100%{
+        transform: translateX(-500vw);
+    }
+}
+
+@keyframes carupdown{
+    0%{
+        transform: translateY(-1vw);
+    }
+    50%{
+        transform: translateY(-2vw);
+    }
+    100%{
+        transform: translateY(-1vw);
+    }
+}
